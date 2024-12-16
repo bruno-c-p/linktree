@@ -1,0 +1,62 @@
+.dark #switch button {
+  right: 0;
+  left: initial;
+  animation: slide-in 0.4s forwards;
+}
+
+#switch {
+  width: 64px;
+  margin-top: 24px;
+  position: relative;
+  margin-inline: auto;
+
+  button {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-color: var(--toggle-handle-color);
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 1;
+    font-size: 16px;
+    animation: slide-out 0.4s;
+    transition: outline 0.3s;
+
+    &:hover {
+      outline: 8px solid var(--highlight-color);
+    }
+  }
+
+  span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    --webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}

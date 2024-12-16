@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Bruno Cardozo | Linktree</title>
+</head>
+
+<body>
+    <main id="page">
+        <section id="profile">
+            <img src="./src/images/profile.webp" alt="" height="100" width="100">
+            <strong>@bruno-c-p</strong>
+        </section>
+        <div id="switch">
+            <button>
+                <i class="ph ph-sun"></i>
+                <!-- <i class="ph ph-moon-stars"></i> -->
+            </button>
+            <span></span>
+        </div>
+        <section id="links">
+            <ul>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://brunocardozo.com.br/">My Developer
+                        Portfolio</a>
+                </li>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer"
+                        href="https://www.sulinfoco.com.br/unibave-esta-entre-as-cinco-universidades-mais-empreendedoras-do-brasil/">
+                        My Journey at Reuni Challenge 2023
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer"
+                        href="https://www.pmo.sc.gov.br/midia/noticias/item/3427-prefeitura-e-unibave-oferecem-curso-gratuito-de-programacao-de-sistemas">
+                        Empowering Future Programmers
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="socials">
+            <ul>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/bruno-c-p">
+                        <i class="ph ph-github-logo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/bruno-cardozo-pereira/">
+                        <i class="ph ph-linkedin-logo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://dribbble.com/bruno-c-p">
+                        <i class="ph ph-dribbble-logo"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer id="credits">
+        <span>&copy; Bruno Cardozo 2024</span>
+    </footer>
+    <script>
+        const html = document.documentElement
+        const switchButton = document.querySelector("#switch button")
+
+        function toggleTheme() {
+            html.classList.toggle('dark')
+        }
+
+        switchButton.addEventListener('click', toggleTheme)
+    </script>
+</body>
+
+</html>
