@@ -48,6 +48,10 @@ img {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: 400px) {
   :root {
     --background-image: url("../images/bg-desktop-light.jpg");

@@ -21,7 +21,7 @@
         <div id="switch">
             <button>
                 <i class="ph ph-sun"></i>
-                <!-- <i class="ph ph-moon-stars"></i> -->
+                <i class="ph ph-moon-stars hidden"></i>
             </button>
             <span></span>
         </div>
@@ -48,18 +48,20 @@
         <section id="socials">
             <ul>
                 <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/bruno-c-p">
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/bruno-c-p"
+                        title="Follow on Github">
                         <i class="ph ph-github-logo"></i>
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" rel="noopener noreferrer"
+                    <a target="_blank" rel="noopener noreferrer" title="Follow on Linkedin"
                         href="https://www.linkedin.com/in/bruno-cardozo-pereira/">
                         <i class="ph ph-linkedin-logo"></i>
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" rel="noopener noreferrer" href="https://dribbble.com/bruno-c-p">
+                    <a target="_blank" rel="noopener noreferrer" href="https://dribbble.com/bruno-c-p"
+                        title="Follow on Dribbble">
                         <i class="ph ph-dribbble-logo"></i>
                     </a>
                 </li>
@@ -72,9 +74,11 @@
     <script>
         const html = document.documentElement
         const switchButton = document.querySelector("#switch button")
+        const icons = document.querySelectorAll("#switch button i")
 
         function toggleTheme() {
             html.classList.toggle('dark')
+            icons.forEach((icon) => icon.classList.toggle('hidden'))
         }
 
         switchButton.addEventListener('click', toggleTheme)
